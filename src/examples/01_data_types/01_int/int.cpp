@@ -1,6 +1,6 @@
 #include "int.h"
 
-using std:: cout;// i will use the cout object -- display to screen 
+using std::cout;// i will use the cout object -- display to screen 
 
 /*
 Function echo_variable returns the incoming parameter
@@ -23,5 +23,10 @@ void reassign_int_data_type()
     cout<<num<<"\n";
     int num = 15.5
     cout<<num<<"\n";//truncates numbers to the right of the deciaml
+
+}
     
+int echo_variable(int num)
+{
+    return num;    
 }
