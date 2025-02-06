@@ -23,10 +23,17 @@ void reassign_int_data_type()
     cout<<num<<"\n";
     int num = 15.5
     cout<<num<<"\n";//truncates numbers to the right of the deciaml
-
 }
-    
+
 int echo_variable(int num)
 {
     return num;    
+}
+
+int subtract_numbers (int num1, int num2)
+{
+    int result;
+    result = num1 + num2;
+
+    return result;
 }
