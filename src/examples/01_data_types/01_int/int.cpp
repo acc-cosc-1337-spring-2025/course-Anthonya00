@@ -17,11 +17,11 @@ void use_int_data_type()
 
 void reassign_int_data_type()
 {
-    int num = 5
+    int num = 5;
     cout<<num<<"\n";
-    int num = 10
+    num = 10;
     cout<<num<<"\n";
-    int num = 15.5
+    num = 15.5;
     cout<<num<<"\n";//truncates numbers to the right of the deciaml
 }
 
