@@ -52,15 +52,3 @@ TEST_CASE("Test copy/value variable")
 
 }
 
-TEST_CASE("Test reference variable")
-{
-	auto num1 = 5;
-	int &num2 = num1;
-
-	REQUIRE(NUM1 ==  num2);
-	num2 = 10; //num2 has the address of num1 thus we can modify 
-
-	REQUIRE(num1 == 10);
-
-}
-

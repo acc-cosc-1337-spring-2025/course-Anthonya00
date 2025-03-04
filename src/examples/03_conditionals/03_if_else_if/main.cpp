@@ -12,7 +12,14 @@ Pass the year to get_generation function and display function result.
 */
 int main() 
 {
+	auto year = 0;
+
+	cout<<"Enter a year: "
+	cin>>year;
+
+	auto genreation = get_generation(year);
 	
+	cout<<"Generation: "<<generation<<"\n";
 	
 	return 0;
 }
