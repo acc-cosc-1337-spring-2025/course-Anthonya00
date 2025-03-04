@@ -29,5 +29,16 @@ TEST_CASE("Test value/reference parameters (variables)")
 	REQUIRE(num1 == 5);
 	REQUIRE(num1 == 20);
 
+}
 
+TEST_CASE("Test return value/copy")
+{
+	int num1 =2, num2 = 2;
+	REQUIRE(get_product(num1, num2)==4);
+}
+
+TEST_CASE("Test return reference")
+{
+	int num1 =2, num2 = 2;
+	REQUIRE(get_product_ref(num1, num2)==4);
 }
