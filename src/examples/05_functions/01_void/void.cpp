@@ -12,3 +12,9 @@ void use_global_variable()
     std::cout<<global<<"\n";
 
 }
+
+int show_area(double length , double width);
+{
+    
+
+}
