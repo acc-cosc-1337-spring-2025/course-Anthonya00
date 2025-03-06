@@ -47,8 +47,15 @@ TEST_CASE("Test return reference")
 	
 }
 
-TEST_CASE("Test show area default ");
+TEST_CASE("Test show area default ")
 {
 	REQUIRE(show_area(5,5) == 25);
 	REQUIRE(show_area() == 200);
+}
+
+TEST_CASE("Test overloaded get gross pay")
+{
+
+		REQUIRE(get_weekly_gross_pay(40,20) == 800);
+		REQUIRE(get_weekly_gross_pay(52000) == 1000);
 }

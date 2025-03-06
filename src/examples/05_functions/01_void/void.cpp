@@ -15,6 +15,18 @@ void use_global_variable()
 
 int show_area(double length , double width);
 {
-    
+    return length*width;
 
+}
+
+double get_weekly_gross_pay(int hours, double rate);
+
+{
+    return hours * rate;
+
+}
+
+double get_weekly_gross_pay(double yearly_slaray);
+{
+    return yearly_salary / 52;
 }
