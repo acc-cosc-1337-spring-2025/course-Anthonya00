@@ -6,23 +6,18 @@ using std::string;
 
 int main()
 {   
-    int num = 0;
-
     string lang = "C++";
-    cout<<"size: "<<lang.size()<<"\n";
-    cout<<"capacity: "<<lang.capacity()<<"\n\n";
+    int num = 5;
 
-    lang.append("123456789012");
+    cout<<lang<<"\n";
+    cout<<"Address of lang: "<<&lang<<"\n";
+    cout<<"Address of num: "<<&lang<<"\n";
 
-    string lang = "C++";
-    cout<<"size: "<<lang.size()<<"\n";
-    cout<<"capacity: "<<lang.capacity()<<"\n\n";
+    cout<<lang[0]<<"\n";
 
-    lang.append("1");
-
-    string lang = "C++";
-    cout<<"size: "<<lang.size()<<"\n";
-    cout<<"capacity: "<<lang.capacity()<<"\n";
+    cout<<"Addres of character at 0 index C: "<<static_cast<void*>(&lang[0])<<"\n";
+    cout<<"Addres of character at 1 index +: "<<static_cast<void*>(&lang[1])<<"\n";
+    cout<<"Addres of character at 2 index +: "<<static_cast<void*>(&lang[2])<<"\n";
 
 
     return 0;

@@ -13,5 +13,23 @@ void string_value_param(string lang)
     }
 
     cout<<lang<<"\n";
+}
+
+
+
+
+
+
+
+
+void string_value_param_while(std::string lang);
+
+{
+    auto indx = 0;
+    while (idx<)
+
+
+
 
 }
+

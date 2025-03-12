@@ -2,4 +2,8 @@
 #include<string>
 
 
-void string_value_param(std::string str);
+void string_value_param(std::string lang);
+void string_re_param(std::string lang);
+
+
+void string_value_param_while(std::string lang);
