@@ -86,4 +86,15 @@ TEST_CASE("Test account withdraw with negative value")
 	REQUIRE(account.get_balance() == 500);
 
 
+TEST_CASE("Test bank account db", "Values are between 1 to 10000")
+{
 
+	for (auto i =0; i < 10; i++)
+	{
+		BankAccountDB db;
+		REQUIRE(db.get_balance() >= 1);
+		REQUIRE(db.get_balance() <= 10000);
+	}
+
+
+}

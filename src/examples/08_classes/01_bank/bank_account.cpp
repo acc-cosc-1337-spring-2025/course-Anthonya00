@@ -10,9 +10,9 @@ void BankAccount::deposit(int amount)
     }
 }
 
-void BankAccount:: withdraw(int amount
+void BankAccount:: withdraw(int amount)
     {
-        if(amount > 0 & blance - amount > 0)
+        if(amount > 0 & balance - amount > 0)
         {
             
 
