@@ -2,6 +2,9 @@
 #include "bank_account.h"
 #include <iostream>
 
+using std::cout;
+using std::cin;
+
 #ifndef ATM_H
 #define ATM_H
 
@@ -16,8 +19,11 @@ public:
 
 private:
     BankAccount account;
-
-
 };
 
 #endif
+
+void dispaly_balance(BankAccount account)
+{
+    cout<<" Free function dispaly_balance "<<account.get_balance()<<"\n";
+}

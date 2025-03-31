@@ -19,3 +19,4 @@ class TicTacToe{
         void clear_board();
         string X_or_O;
 };
+
