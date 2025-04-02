@@ -2,10 +2,8 @@
 #include "bank_account.h"
 #include "bank_account_db.h"
 #include "savings_account.h"
-#include "checking_account.h"
 #include <iostream>
 #include <time.h>
-#include "atm.h"
 
 
 using std::cout;
@@ -14,6 +12,7 @@ using std::cin;
 
 int main()
 {	
+	srand(time(NULL));
 	BankAccountDB db;
 
 	CheckingAccount account(db.get_balance());

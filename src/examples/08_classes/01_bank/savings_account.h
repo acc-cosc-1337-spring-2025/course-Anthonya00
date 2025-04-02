@@ -1,5 +1,5 @@
 //savings_account.h
-#include<iostream>
+
 #include " bank_account.h"
 
 #ifndef SAVINGS_ACCOUNT_H
@@ -8,7 +8,8 @@
 class SavingsAccount: public BankAccount
 {
 public:
-
+    SavingsAccount(int b) : BankAccount(b){}
+    int get_balance()const {std:: cout<<" SavingsAccount:get_balance: "<<BankAccoun:: get_blanace();}
 private:
 
 };

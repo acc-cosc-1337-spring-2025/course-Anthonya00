@@ -1,5 +1,4 @@
 //checking_account.h
-#include<iostream>
 
 #include "bank_account.h"
 
@@ -9,7 +8,7 @@
 class CheckingAccount : public BankAccount
 {
 public: 
-    checkingAccount(int b) ; BankAccount(b){}
+    CheckingAccount(int b) ; BankAccount(b){}
 
 private:
 };
