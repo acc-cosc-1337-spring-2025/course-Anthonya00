@@ -1,4 +1,6 @@
 //bank_account.h
+#ifndef BANK_ACCOUNT_H
+#define BANK_ACCOUNT_H
 
 class BankAccount
 {
@@ -12,3 +14,5 @@ private://only this class can use variables/functions
     int balance{};
 
 };
+
+#endif

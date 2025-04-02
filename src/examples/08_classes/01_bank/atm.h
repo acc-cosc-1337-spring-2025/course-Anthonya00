@@ -23,7 +23,5 @@ private:
 
 #endif
 
-void dispaly_balance(BankAccount account)
-{
-    cout<<" Free function dispaly_balance "<<account.get_balance()<<"\n";
-}
+void dispaly_balance(BankAccount account);
+

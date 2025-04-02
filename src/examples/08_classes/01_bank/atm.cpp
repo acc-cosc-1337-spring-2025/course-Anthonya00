@@ -18,12 +18,21 @@ void ATM::make_deposit()
     account.deposit(amount);
 }
 
-
 void make_withdraw()
-
 {
     auto amount = 0;
     cout<<"Enter withdraw amount: ";
     cin>>amount;
     account.withdraw(amount);
+}
+
+void dispaly_balance(BankAccount account)
+{
+    cout<<" Free function dispaly_balance "<<account.get_balance()<<"\n";
+}
+BankAccount get_account()
+{
+    BankAccount account(500);
+    return account;
+
 }
