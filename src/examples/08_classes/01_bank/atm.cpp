@@ -26,6 +26,7 @@ void make_withdraw()
     account.withdraw(amount);
 }
 
+//FREE FUNCTIOIN - NOT PART OF THE BANKACCOUNT CLASS
 void dispaly_balance(BankAccount account)
 {
     cout<<" Free function dispaly_balance "<<account.get_balance()<<"\n";
@@ -34,5 +35,9 @@ BankAccount get_account()
 {
     BankAccount account(500);
     return account;
-
+}
+BankAccount& get_reference_account()
+{
+    BankAccount account(500);
+    return account;
 }

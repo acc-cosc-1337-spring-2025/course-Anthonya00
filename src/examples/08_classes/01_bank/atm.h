@@ -23,5 +23,8 @@ private:
 
 #endif
 
+//FREE FUNCTION- NOT PART OF THE BANKACCOUNT CLASS
 void dispaly_balance(BankAccount account);
+BankAccount get_account();
+BankAccount& get_reference_account();
 
