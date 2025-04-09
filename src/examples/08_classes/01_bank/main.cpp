@@ -12,29 +12,16 @@ using std::cin;
 
 int main()
 {	
-	srand(time(NULL));
-	BankAccountDB db;
-	BankAccount bad_account - get_reference_account();
-	cout<<account.get_balance();
+	Checking Account checking(500);
+	BankAccount* account = &checking;
 
-	/*srand(time(NULL));
-	BankAccountDB db;
-	//cout<<"Balance:" <<accountDB.get_balance();
+	cout<<account->get_balance()<<"\n";//be a checking account
 
-	auto amount = 0;
-	//variable of a class is equal to an object in memory
-	BankAccount account(db.get_balance());//create our own variable from the newly created data type
+	SavinsAccount savings(750);
+	account = &savings;
 
-	ATM atm(account);
-
-	atm.dispaly_balance();
-	atm.make_deposit();
-	atm.dispaly_balance();
-	atm.make_withdraw();
-	atm.dispaly_balance();
-
-	BankAccount account1 = get_account();
-	dispaly_balance(account1);*/
+	cout<<account->get_balance<<"\n";//be a savings account 
+	cout<<savings.get_balance()<<"\n";
 
 	return 0;
 }
