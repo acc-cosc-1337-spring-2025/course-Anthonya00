@@ -3,25 +3,24 @@
 #include "bank_account_db.h"
 #include "savings_account.h"
 #include <iostream>
-#include <time.h>
+#include <memory>
+#include <vector>
 
 
-using std::cout;
+using std::cout;using std::unique_ptr; using std:: make_unique;
 using std::cin;
 
 
 int main()
 {	
-	Checking Account checking(500);
-	BankAccount* account = &checking;
+	vector<unique_ptr<BankAccount>> accounts; 
+	unique_ptr<BankAccount> checking = make_unique<CheckingAccount>(500);
 
-	cout<<account->get_balance()<<"\n";//be a checking account
+	cout<<"checking get balance "<<checking-> get_balance()<<"\n";
+	
+	//accounts.push_back(std::move(checking));
 
-	SavinsAccount savings(750);
-	account = &savings;
-
-	cout<<account->get_balance<<"\n";//be a savings account 
-	cout<<savings.get_balance()<<"\n";
+	cout<<"checking get balance "<<checking-> get_balance()<<"\n";
 
 	return 0;
 }
