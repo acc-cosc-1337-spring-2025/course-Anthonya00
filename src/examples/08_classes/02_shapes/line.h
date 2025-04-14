@@ -5,7 +5,7 @@
 #define LINE_H
 
 
-class Line: public Shape 
+class Line: public shape 
 {
 public:
     void draw(){cout<<"Draw line...\n"}

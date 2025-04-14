@@ -3,7 +3,7 @@
 #define SHAPE_H
 #include <iostream>
 
-class shap
+class shape
 {
     virtual void draw() = 0;//pure virtual function
 };
