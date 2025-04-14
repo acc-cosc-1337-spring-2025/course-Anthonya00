@@ -5,6 +5,9 @@
 using std::string;
 using std::vector;
 
+#ifndef tic_tac_toe
+#define tic_tac_toe
+
 class TicTacToe{
     public:
         vector<string> board{9, " "};
@@ -25,4 +28,4 @@ class TicTacToe{
         bool check_diagonal_win();
         void set_winner();
 };
-
+#endif
