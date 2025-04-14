@@ -18,9 +18,11 @@ int main()
 
 	cout<<"checking get balance "<<checking-> get_balance()<<"\n";
 	
-	//accounts.push_back(std::move(checking));
+	accounts.push_back(std::move(checking));
 
-	cout<<"checking get balance "<<checking-> get_balance()<<"\n";
+	//cout<<"checking get balance "<<checking-> get_balance()<<"\n";
+
+	cout<<accounts[0]->get_balance()<<"\n";
 
 	return 0;
 }
