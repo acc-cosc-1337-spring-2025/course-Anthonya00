@@ -1,32 +1,62 @@
 #include "tic_tac_toe_3.h"
-
-/*
-class function check_column_win
-Win by column if and return true if
-0,3, and 6 are equal
-1, 4, and 7
-2, 5, and 8
-else
-false
-*/
+#include <iostream>
+using std:: cout;
 
 
+bool TicTacToe3:: check_colum_win(){
 
-/*
-class function check_row_win
-Win by row if
-0, 1, 2 are equal
-3,4,5 are equal
-6,7,8 are equal
-*/
+    if (board[0] == board[3] && board[0] == board[6] && board[0] != " "){
 
+        return true;
+    }
+    if (board[1] == board[4] && board[1] == board[7] && board[1] != " "){
 
+        return true;
+    }
+    if (board[2] == board[5] && board[2] == board[8] && board[2] != " "){
 
-/*
-class function check_diagonal_win
-Win diagonally
-0 1 2
-3 4 5
-6 7 8
+        return true;
+    }
+    return false;
+}
 
-*/
+bool TicTacToe3:: check_row_win(){
+
+    if (board[0] == board[1] && board[0] == board[2] && board[0] != " "){
+
+        return true;
+    }
+    if (board[3] == board[4] && board[3] == board[5] && board[3] != " "){
+
+        return true;
+    }
+    if (board[6] == board[7] && board[6] == board[8] && board[6] != " "){
+
+        return true;
+    }
+    return false;
+}
+
+bool TicTacToe3:: check_diagonal_win(){
+
+    if (board[0] == board[4] && board[0] == board[8] && board[0] != " "){
+
+        return true;
+    }
+    if (board[6] == board[4] && board[6] == board[2] && board[6] != " "){
+
+        return true;
+    }
+    return false;
+}    
+
+void TicTacToe3:: display_board() const{
+
+    cout<<"\n";
+    cout<<board[0]<<" | "<<board[1]<<" | "<<board[2]<<"\n";
+    cout<<"---------\n";
+    cout<<board[3]<<" | "<<board[4]<<" | "<<board[5]<<"\n";
+    cout<<"---------\n";
+    cout<<board[6]<<" | "<<board[7]<<" | "<<board[8]<<"\n";
+    
+}
