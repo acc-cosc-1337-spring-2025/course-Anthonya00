@@ -51,26 +51,33 @@ void run_menu()
 {
     //list of uniqque ptr to accounts 
     auto account_index = 0, bank_menu_choice=0;
+    BankAccountDB DB;
+    vector<Customer>customers;
+    customers.push_back(Customer(db));
+    customers.push_back(Customer(db));
+    customers.push_back(Customer(db));
+    customers.push_back(Customer(db));
+    customers.push_back(Customer(db));
+    cout<<customers.size()<<"\n";
 
-    vector<unique_ptr<BankAccount>> accounts ; 
-    accounts.push_back(make_unique<CheckingAccout>(500));
-    accounts.push_back(make_unique<SavingsAccount>(750));
+
+
     
-
+    auto customer_index = rand() % customer
     //loop prompt user for checking or savings 
 
     do {
-        cout<<"Enter 1 menu choice: ";
-        cin account_index;
+        cout<<"Enter 1 for checking 2 for savings : ";
+        cin>>account_index;
 
-        auto* account = accountw [account_index-1].get();
+        auto* account = customers [customer_index].get();
         ATM atm (account);
 
     }
 
     do{
 
-        //loop dplauy menu handle user options
+        //loop display menu handle user options
         do 
         {
             

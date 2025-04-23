@@ -1,5 +1,6 @@
 //atm.h
 #include "bank_account.h"
+#include "customer.h"
 #include <iostream>
 
 using std::cout;
