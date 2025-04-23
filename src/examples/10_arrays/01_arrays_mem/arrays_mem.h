@@ -5,7 +5,6 @@
 void create_stack_array()
 {
 
-    const int SIZE = 3;
-    int nums[SIZE]{6,1,10};
+
 
 }
