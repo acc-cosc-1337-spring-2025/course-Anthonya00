@@ -1,13 +1,28 @@
 #include<iostream>
 #include "arrays_dyn_1.h"
 
+using std:: cout;
+
 int main()
 {
 	//create memory
 	//use memory HOW LONG DO QWE NEED THE DATA????
 	///many fuction calls/code
 	//clear/realease/delete memory
-	use_dynamic_memory_array(3);
+	int* nums = get_dyanmic_memory(3);
+
+	nums[0] = 6;
+	nums[1] = 1;
+	nums[2] = 10;
+
+	for (auto i =0; i < 3; i++ )
+	{
+		cout<<nums[i]<<"\n";
+
+	}
+	nums = nullptr
+	delete_dynamic_memory(nums);
+
 	   
 	return 0;
 }
