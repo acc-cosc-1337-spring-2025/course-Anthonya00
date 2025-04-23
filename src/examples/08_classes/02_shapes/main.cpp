@@ -1,7 +1,5 @@
 //main
 #include <iostream>
-#include<memory>
-#include<vector>
 #include "shape.h"
 #include "line.h"
 #include "circle.h"
@@ -11,19 +9,19 @@ Create vector of Shape pointers
 iterate with auto
 */
 
-using std:: vector;using std:: unique_ptr;using std:: make_unique;
-
 int main() 
 {	
-	vector<unique_ptr<shape>> shapes;
-	shapes.push_back(make_unique<Line>());
-	shapes.push_back(make_unique<Circle>());
 
-	for(auto &shape: shapes)
+	Circle circle1;
+	Line line;
+	Circle circle2;
 
-	{
-			shape->draw();
-	}
+	shape* shapes[3]{&circle1, &line, &circle2};
+
+	shapes[0]->draw();
+	shapes[1]->draw();
+	shapes[2]->draw();
+	
 
 
 	return 0;
