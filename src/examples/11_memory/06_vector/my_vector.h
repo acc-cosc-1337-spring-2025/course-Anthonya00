@@ -8,7 +8,10 @@ class MyVector
 {
 public: 
     MyVector(int c);//constructor
-    
+    MyVector(const Vector& v)
+    int& operator[](int index){return elements[index];}
+    int& operator[](int index)const{return elements[index];}
+    ~MyVector();//destructor
 
 private:
     int size{0};//number of elements in the list
