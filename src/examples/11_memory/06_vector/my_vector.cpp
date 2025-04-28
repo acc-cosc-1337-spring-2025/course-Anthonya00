@@ -16,6 +16,27 @@ MyVector:: MyVector(const MyVector& v1) : size(v1.size), capacity(v1.capacity), 
     }
 }
 
+MyVector& MyVector::operator= (const Vector& v);
+{
+    int* temp = new int[v1.size];
+
+    for (auto i=0; i < v1.size; i++)
+    {
+        temp[i] = v1.elements[i];
+    }
+
+    cout<<"copy assignment delete memory at "<<elements<<"\n";
+    delete[]elements;
+    elements = temp;
+    cout<<"copy assignment new memory createat "<<elements<<"\n";
+
+    size = v1.size;
+
+    return* this ;
+    
+
+}
+
 MyVector::~MyVector()
 {
     cout<<"Destructor ~MyVector() deleting memory at: "<<elements<<"\n";
