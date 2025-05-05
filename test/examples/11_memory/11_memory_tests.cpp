@@ -46,7 +46,7 @@ TEST_CASE("Test my vector overwrite with std::move")
 {
 	MyVector v2(3);
 	v2 = get_my_vector();
-}*/
+}
 
 TEST_CASE("Test Add elementsto MyVector with push back")
 {
@@ -75,4 +75,15 @@ TEST_CASE("Test Add elementsto MyVector with push back")
 	REQUIRE(v1.Size() == 5);
 
 
+}*/
+
+TEST_CASE("Test default constructor execture Reserve capacity= == 0 if branch")
+{
+	MyVector v1;
+	REQUIRE(v1.Capacity() == 0);
+	REQUIRE(v1.Size() == 0);
+
+	v1.PushBack(10);
+	REQUIRE(v1.Capacity() == 8);
+	REQUIRE(v1.Size() == 1);
 }

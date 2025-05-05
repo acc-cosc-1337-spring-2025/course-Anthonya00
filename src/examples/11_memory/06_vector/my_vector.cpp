@@ -2,6 +2,13 @@
 
 using std:: cout;
 
+MyVector:: MyVector()
+    
+{
+
+
+}
+
 MyVector::MyVector (int c) : capacity(c), elements {new int [c]}
 {
     cout<<"constructor MyVector (c) created memory at: "<<elements<<"\n";
