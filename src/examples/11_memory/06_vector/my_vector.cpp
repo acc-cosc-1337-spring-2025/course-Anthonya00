@@ -80,6 +80,16 @@ void MyVector:: Reserve(int new_size)
 
 void MyVector:: PushBack(int value)
 {
+    if(capacity == 0 )
+    {
+        Reserve(RESERVE_DEFAULT_SIZE);//Create new memory of 8 slots
+    }
+    else if(capacity == size)
+    {
+        Reserve(capacity * RESERVE_DEFAULT_MULTIPLIER);//double the capacity
+    }
+
+
     elements[size] = value;
     size++;
 }
