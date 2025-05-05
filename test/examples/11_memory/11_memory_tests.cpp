@@ -25,7 +25,7 @@ TEST_CASE("Test shallow class copy")
 	MyVector v1(3);
 	MyVector v2 = v1;
 
-}*/
+
 
 TEST_CASE("Test class copy assignment")
 {
@@ -33,4 +33,17 @@ TEST_CASE("Test class copy assignment")
 	MyVector v2(3);
 	v2 = v1;
 
+}
+
+TEST_CASE("Test my vector overwrite with std::move")
+{
+	MyVector v1(3);
+	MyVector v2 = std::move(v1);
+
+}*/
+
+TEST_CASE("Test my vector overwrite with std::move")
+{
+	MyVector v2(3);
+	v2 = get_my_vector();
 }

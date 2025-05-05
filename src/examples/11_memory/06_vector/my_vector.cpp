@@ -34,7 +34,48 @@ MyVector& MyVector::operator= (const Vector& v);
 
     return* this ;
     
+}
 
+MyVector::MyVector(MyVector&& v)
+: size {v1.size}, elements {v1.elements}
+{
+    cout<<" Move constructor - memory pointer switched from v1 to v2: "<<elements<<"\n";
+    v1.elements = nullptr;
+    v1.size = 0;
+}
+
+MyVector& MyVector::operator=(MyVctor&& v1)
+{
+    cout<<"Mve assignment - Delete memory"<<elements<<"\n";
+    delete[]elements;
+    elements = v1.elements;
+    size = v1.size;
+    cout<<"Move assignment - Memory pointer switched "<<elements<<"\n";
+
+    v1.elements = nullptr;
+    v1.size = 0;
+    
+    return *this;
+}
+
+void MyVector:: Reserve(int new_size)
+{
+    if(new_size > capacity)
+    {
+        int*temp = new int[new_size];
+        cout<< "Reserve-temp memory created: "<<temp<<"\n";
+
+        for (auto i=o; i < size; i ++)
+        {
+                temp[i] = elements[i];
+        }
+
+        cout<<"Reserve- delete the old memory:"<<elements<<"\n";
+        delete[]elements;
+
+        elements = temp;
+        capacity = new_size;
+    }
 }
 
 MyVector::~MyVector()
@@ -44,3 +85,9 @@ MyVector::~MyVector()
 
 }
 
+////FREE FUNCTION NOT PART OF THE MYVECTOR CLASS
+MyVector get_my_vector()
+{
+    MyVector v1(3);
+    return v1;
+}
