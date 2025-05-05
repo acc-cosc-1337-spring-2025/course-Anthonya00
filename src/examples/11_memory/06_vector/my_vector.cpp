@@ -78,6 +78,12 @@ void MyVector:: Reserve(int new_size)
     }
 }
 
+void MyVector:: PushBack(int value)
+{
+    elements[size] = value;
+    size++;
+}
+
 MyVector::~MyVector()
 {
     cout<<"Destructor ~MyVector() deleting memory at: "<<elements<<"\n";
