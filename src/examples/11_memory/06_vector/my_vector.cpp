@@ -2,19 +2,22 @@
 
 using std:: cout;
 
-MyVector:: MyVector()
+template<typename T>
+MyVector<T>:: MyVector()
     
 {
 
 
 }
 
-MyVector::MyVector (int c) : capacity(c), elements {new int [c]}
+template<typename T>
+MyVector<T>::MyVector (int c) : capacity(c), elements {new T[c]}
 {
     cout<<"constructor MyVector (c) created memory at: "<<elements<<"\n";
 }
 
-MyVector:: MyVector(const MyVector& v1) : size(v1.size), capacity(v1.capacity), elements{new int [v1.capacity]}
+template<typename T>
+MyVector<T>:: MyVector(const MyVector& v1) : size(v1.size), capacity(v1.capacity), elements{new T [v1.capacity]}
 {
     cout<< "Constructor MyVector(const MyVector& v) created memory at: "<<elements<<"\n";
     for (auto i=0; i < size; i++)
@@ -23,9 +26,10 @@ MyVector:: MyVector(const MyVector& v1) : size(v1.size), capacity(v1.capacity), 
     }
 }
 
-MyVector& MyVector::operator= (const Vector& v);
+template<typename T>
+MyVector<T>r& MyVector<T>::operator= (const Vector& v);
 {
-    int* temp = new int[v1.size];
+    int* temp = new T[v1.size];
 
     for (auto i=0; i < v1.size; i++)
     {
@@ -43,7 +47,9 @@ MyVector& MyVector::operator= (const Vector& v);
     
 }
 
-MyVector::MyVector(MyVector&& v)
+template<typename T>
+
+MyVector<T>::MyVector(MyVector<T>&& v)
 : size {v1.size}, elements {v1.elements}
 {
     cout<<" Move constructor - memory pointer switched from v1 to v2: "<<elements<<"\n";
@@ -65,11 +71,12 @@ MyVector& MyVector::operator=(MyVctor&& v1)
     return *this;
 }
 
-void MyVector:: Reserve(int new_size)
+template<typename T>
+void MyVector<T>:: Reserve(int new_size)
 {
     if(new_size > capacity)
     {
-        int*temp = new int[new_size];
+        int*temp = new T[new_size];
         cout<< "Reserve-temp memory created: "<<temp<<"\n";
 
         for (auto i=o; i < size; i ++)
@@ -101,16 +108,20 @@ void MyVector:: PushBack(int value)
     size++;
 }
 
-MyVector::~MyVector()
+template<typename T>
+
+MyVector<T>::~MyVector()
 {
     cout<<"Destructor ~MyVector() deleting memory at: "<<elements<<"\n";
     delete[] elements; 
 
 }
 
+template class
+
 ////FREE FUNCTION NOT PART OF THE MYVECTOR CLASS
-MyVector get_my_vector()
+MyVector<T> get_my_vector()
 {
-    MyVector v1(3);
+    MyVector<int> v1(3);
     return v1;
 }
