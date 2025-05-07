@@ -1,5 +1,17 @@
 #include "recursion.h"
-#include<iostream>
+
+
+using std::cout;
+
+void runaway_recursion()
+{
+
+    cout<<"runaway...\n";
+    runaway_recursion;
+
+
+
+}
 //Write code for recursive display function
 
 
